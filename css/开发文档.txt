@@ -1,0 +1,110 @@
+ 参考对象
+ 
+ * typography.css 字体排版规则
+ * grid.css 表格布局
+ * layout.css 布局
+ * form.css 表单
+ * general.css CSS常规设置
+
+ 内容采用技术
+ 布局 1.float生成的grid的布局 2.display:grid 
+ Grid 可以做Flexbox做不了的事
+ Flexbox 可以做 Grid 做不了的事
+ 他们可以共同工作。
+ Grid item可以成为flexbox容器，
+ flex item可以成为grid 容器。
+ Grid 可以嵌套 flexFlexbox本质上从单一维度布局，行或列。
+ grid布局从双维度行和列
+
+ 也就是flexbox比较适合做一些比如导航栏布局的，而grid适合做整个页面的。
+
+
+ 使用sass 编译生成css
+
+ 1.sass特点
+    1.1：支持变量申明  $开头
+        eg:$primaryColor: #333;
+
+    1.2支持嵌套 
+    @at-root：跳出嵌套 
+    @at-root (without: media)，@at-root (without: support)
+        nav {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            li { display: inline-block; }
+
+            a {
+                display: block;
+                padding: 6px 12px;
+                text-decoration: none;
+            }
+        }
+
+    1.3支持导入
+        //文件名的后缀可以省略
+        @import 'url'
+
+    1.4支持函数 @mixin
+        使用方式
+        1.4.1申明函数
+        @mixin box-sizing ($sizing) {
+                -webkit-box-sizing:$sizing;     
+                    -moz-box-sizing:$sizing;
+                        box-sizing:$sizing;
+                }
+        
+        1.4.2使用函数 直接调用即可
+        .box-border{
+            border:1px solid #ccc;
+            @include box-sizing(border-box);
+        }
+
+        1.5支持继承 
+        ：大致使用思路，直接使用关键字@extend 接样式的选择器即可
+        eg:.message {
+            border: 1px solid #ccc;
+            padding: 10px;
+            color: #333;
+            }
+
+            .success {
+            @extend .message;
+            border-color: green;
+            }
+
+            .error {
+            @extend .message;
+            border-color: red;
+            }
+
+            .warning {
+            @extend .message;
+            border-color: yellow;
+            }
+ 
+            1.6支持运算 sass可进行简单的加减乘除运算等
+            eg:.container { width: 100%; }
+
+                article[role="main"] {
+                float: left;
+                width: 600px / 960px * 100%;
+                }
+
+                aside[role="complimentary"] {
+                float: right;
+                width: 300px / 960px * 100%;
+                }
+
+                1.7颜色函数 让变换颜色更加简单。颜色函数是官方定义的
+                $linkColor: #08c;
+                a {
+                    text-decoration:none;
+                    color:$linkColor;
+                    &:hover{
+                    color:darken($linkColor,10%);
+                    }
+                }
