@@ -7,6 +7,12 @@
   padding:10px 0;
   text-align: center;
 }
+.r-border{
+    border-right: 1px solid #fff;
+}
+.r-border-black{
+    border-right: 1px solid #000;
+}
 
 
 .flex-box {
