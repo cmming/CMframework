@@ -8,23 +8,33 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/flex.css">
     <link rel="stylesheet" href="./css/base.css">
-    
-    <link rel="stylesheet" href="./framework/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--<link rel="stylesheet" href="./framework/font-awesome-4.7.0/css/font-awesome.min.css">-->
     <!--使用js的方式调用图标-->
     <script src="./js/iconfont.js"></script>
     <script src="./js/prefixfree.min.js"></script>
-    
+
 </head>
 
 <body class="Site">
     <header>
         <div class="left-header">全部作者</div>
         <div class="center-header">be here now</div>
-        <div class="right-header"></div>
+        <div class="right-header">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-sousuo_sousuo"></use>
+            </svg>
+        </div>
     </header>
     <div class="HolyGrail-body Site-content">
         <main class="HolyGrail-content" style="height: 1000px;">
-            <div class="img-content">
+            <div class="img-content material-design" data-color="red">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="img-content material-design" data-color="red">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="img-content material-design" data-color="red">
                 <img src="./images/1.jpg" alt="">
             </div>
         </main>
@@ -41,7 +51,7 @@
                     主页
                 </div>
             </li>
-            <li class="flex_tab_item material-design">
+            <li class="flex_tab_item">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-faxian1"></use>
                 </svg>
@@ -49,7 +59,7 @@
                     发现
                 </div>
             </li>
-            <li class="flex_tab_item material-design">
+            <li class="flex_tab_item">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-pay1148969easyiconnet"></use>
                 </svg>
@@ -57,7 +67,7 @@
                     关注
                 </div>
             </li>
-            <li class="flex_tab_item material-design">
+            <li class="flex_tab_item">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-geren"></use>
                 </svg>
@@ -69,4 +79,5 @@
     </footer>
 </body>
 <script src="./js/index.js"></script>
+
 </html>
