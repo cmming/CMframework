@@ -16,27 +16,56 @@ html {
 header,
 footer {
     text-align: center;
-     /*flex: 1;*/
-     /*设置为1则顶体尾平分body */
     background: black;
-    /*padding:10px 0;*/
     color: #fff;
 }
 footer{
-    border-top:1px solid #dfdfdf;
-    background-color: #fff; 
+    border-top:1px solid #fff;
+    background-color: #dfdfdf; 
     color: black;
+    position: fixed;
+    width:100%;
+    bottom:0;
+    height: 10vh
+}
+header{
+    border-bottom:1px solid #fff;
+    background-color: #dfdfdf; 
+    color: black;
+    position: fixed;
+    top:0;
+    width:100%;
+    height: 3vh
+}
+header{
+    display: flex;
+    padding:10px 0;
+    opacity: 0.5;
+}
+header .center-header{
+    flex-grow:1;
+}
+.header-conter{
+    padding:5px 0;
 }
 
 .HolyGrail-body {
     display: -webkit-flex;
     display: flex;
     flex: 1;
+    position: relative;
+    top:6vh;
 }
 
 .HolyGrail-content {
     flex: 1;
-    background: pink;
+    /*background: pink;*/
+}
+.img-content{
+    height: 30vh;
+}
+.img-content img{
+    max-width: 100%;
 }
 
 .HolyGrail-nav,
@@ -61,7 +90,7 @@ footer{
 .Site-content {
     flex: 1;
     overflow-y: scroll;
-    background: #0099ff;
+    /*background: #0099ff;*/
 }
 /*点击水波纹*/
 
